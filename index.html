@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+	body{font-family:'Open Sans', sans-serif;}
+    ul, li{list-style: none;}
+	.mb40{margin-bottom: 40px;}
+
+	.top-header{background-color:#354458;font-size:12px;line-height:20px;color:#fff}
+    .top-header p{margin-bottom: 0;}
+	.top-header-contact{margin-left:20px;}
+	.top-header-list{color:#fff}
+	.top-header-list:hover{color:#fff;text-decoration:none;}
+	.logo{margin:0;}
+	.logo-anc{width:226px;height:80px;display:block;font-size:20px;color:#333;line-height:50px;text-transform:uppercase;text-indent: -9999px; background: url(img/logo.png) 0 0 no-repeat;background-size: 100%;margin: 10px 0;}
+	.navigation{background-color:#3a9ad9;height:50px;text-transform:uppercase;transition: all 1s ease;}
+	.navigation-ul{padding:0;margin-bottom: 0;}
+	.navigation-li{position:relative;height:50px;display:inline-block;}
+	.navigation-anc{position:relative;font-size:16px;line-height:50px;height:inherit;color:#fff;padding:0 30px;display:block;transform: perspective(1px) translateZ(0);}
+	.navigation-anc:after{content:'';position:absolute;left:50%;right:50%;height:4px;bottom:0;background:#fff;-webkit-transition-property: left, right;transition-property: left, right;-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+	.navigation-anc:hover{text-decoration:none;color:#fff;}
+	.navigation-anc:hover:after{left:0;right:0;}
+	.banner{overflow:hidden;z-index: 0;}
+    .banner-slides{display: none;}
+    .banner-slides.slick-initialized{display: block;}
+    .slick-dotted.slick-slider{margin-bottom: 0;}
+    .slick-slide{position: relative;}
+	.slick-slide img{width:100%;height:auto;}
+    .banner-slides .slick-dots{bottom: 15px;}
+    .banner-slides .slick-dots li button:before{font-size: 12px;opacity: 1;color: #fff;}
+    .banner-slides .slick-dots li.slick-active button:before{opacity: 1;color: #3a9ad9;}
+    .slider-textOverlay{position: absolute;top: 50px;right: 20px;width: 30%;height: 150px; background-color: #fff;opacity: 0;transition: all 1s ease;}
+    .slider-textWrap{position: relative;top: 50%;transform: translateY(-50%);}
+    .slider-textTitle{color: #000;font-size: 36px;line-height: 150px;height: 150px;font-weight: 600;text-transform: uppercase;margin: 0;}
+    .slick-active .slider-textOverlay{top: 150px;opacity: 0.8;}
+    .slick-prev, .slick-next{display: none!important;}
+
+	.aboutUs{padding: 0 100px;}
+	.aboutUs-title, .blogs-mainTitle{color: #3a9ad9;font-size: 26px;line-height: 34px;height: 34px;font-weight: 600;margin-bottom: 30px;}	
+	.aboutUs-desc{color: #333;font-size: 15px;line-height: 28px;}
+	.services-outerDiv{background-color:#3a9ad9;padding-top: 20px; padding-bottom: 20px;}
+	.services-mainTitle{color: #fff;font-size: 26px;line-height: 34px;height: 34px;font-weight: 600;margin-bottom: 20px;}
+	.services{padding-top: 20px;padding-bottom: 20px;}
+	.services-title{color: #fff;font-size: 18px;line-height: 22px;font-weight: 600;margin: 20px 0;text-transform: uppercase;}
+	.services-desc{color: #fff;font-size: 13px;line-height: 22px;max-height: 88px;overflow: hidden;text-align: left;}
+    .icon-wrap{padding: 2px;background: #fff;display:inline-block;margin: 0 auto;}
+	.icons{transition: 0.5s linear;}
+	.services:hover .icons{transform: rotate(180deg); -webkit-transform: rotate(180deg);}
+
+    .testimonial-div{position: relative; background-image: url(img/testimonial.jpg);background-size: cover;background-attachment: fixed;background-position: center;text-align: center;padding-top: 50px; padding-bottom: 50px;}
+    .testimonial-div .slick-list{margin: 0 50px;}
+    .testimonial-div .slick-dots{bottom: -55px;}
+    .testimonial-div .slick-dots li button:before{font-size: 12px;opacity: 1;color: #fff;}
+    .testimonial-div .slick-dots li.slick-active button:before{opacity: 1;color: #3a9ad9;}
+    .testimonial-text{color: #fff;font-size: 21px;line-height: 28px;font-style: italic;word-wrap: break-word;}
+    .quote-before{color: #fff;position: absolute;top: 50%;transform: translateY(-50%);left: 15px;}
+    .quote-after{color: #fff;position: absolute;top: 50%;transform: translateY(-50%);right: 15px;}
+    .testimonial-div .slick-dotted.slick-slider{margin: 50px 0;}
+    /*.quote-icon::before{content: "\f095";font-family: "FontAwesome";}*/
+
+    .blogs-imgDiv{height: 170px;overflow: hidden;}
+    .blog-img{width: 100%;height: auto;transition: all 0.5s linear;z-index: 0;}
+    .blogs-content{margin: -40px 10px 0px;padding: 0 10px 20px;background: #fff; z-index: 1;position: relative;box-shadow: 1px 4px 17px -4px #aaa;}
+    .blogs-title{color: #333;font-size: 18px;line-height: 22px;font-weight: 600;text-transform: uppercase;margin: 20px 0;}
+    .blogs-desc{color: #333;font-size: 13px;line-height: 22px;max-height: 88px;overflow: hidden;}
+    .blogs-anchor:hover{text-decoration: none;}
+    .blogs-anchor:hover .blogs-content{box-shadow: 1px 10px 17px -4px #aaa;}
+    .blogs-anchor:hover .blog-img{transform: scale(1.1);}
+
+    .contactUs-outerDiv{background-image: url(img/contact.jpg);background-size: cover;background-attachment: fixed;background-position: center;text-align: center;padding-top: 50px; padding-bottom: 50px;}
+    .contactUs-title{color: #fff;font-size: 26px;line-height: 34px;height: 34px;font-weight: 600;margin-bottom: 20px;}
+    .address-title{color: #fff;font-size: 18px;line-height: 22px;font-weight: 600;margin-bottom: 10px;text-transform: uppercase;text-align: left;}
+    .address-text{color: #fff;font-size: 13px;line-height: 20px;max-height: 80px; text-align: left;}
+    .address-text-anchor{color: #fff;display: block;}
+    .address-text-anchor:first-child{margin-bottom: 10px;}
+    .address-icons{margin-right: 10px;}
+    .address-text-anchor:hover{text-decoration: none;color: #3a9ad9;}
+
+    .top-footer{padding-top: 20px;padding-bottom: 20px;}
+    .footer-title{color: #333;font-size: 18px;line-height: 22px;font-weight: 600;text-transform: uppercase;margin: 20px 0;}
+    .footer-text{font-size: 13px;line-height: 22px;}
+    .footer-blog-text{font-size: 13px;line-height: 26px; padding: 0;margin: 0;}
+    .footer-blog-text a{color: #333;height: 26px;overflow: hidden;}
+    .social-icons{display: inline-block;margin-bottom: 0;}
+    .social-icons a{color: #333;margin-left: 15px;}
+    .social-icons a:first-child{margin-left: 0;}
+    .social-icons a:first-child:hover{color: #3B5998;}
+    .social-icons a:nth-child(2):hover{color: #1DA1F2;}
+    .social-icons a:nth-child(3):hover{color: #DB4437;}
+    .footer-outerDiv{padding: 20px 0;background: #000;text-align: center;}
+    .copyright-text{font-size: 12px;line-height: 18px;height: 18px;color: #fff;margin-bottom: 0;}
+
+    .hamburger, .cross{display: none;}
+    .hamburger{position: relative; width: 40px;height: 50px;background-color: #fff;color: #000;padding: 0;border: 0;float: right;}
+    .cross{position: relative; width: 40px;height: 50px;background-color: #fff;color: #000;padding: 0;border: 0;font-size: 50px;float: right;}
+    .sticky-navbar {position: fixed; top: 0; left: 0; width: 100%; z-index: 3;}
+    .sticky-logo{position: fixed; top: 0px; background: #fff; z-index: 4; box-shadow: 1px 1px 3px #333;}
+    .sticky-logo .logo-anc{width: 155px;height: 55px;margin: 5px 0;}
+    .scroll_animate{animation: slideup 1s forwards; opacity: 0;}
+    @keyframes slideup {from {opacity: 0;transform: translateY(40px);} to {opacity: 1;transform: translateY(0);}}
+
+    @media only screen and (max-width:1024px){
+        .sticky-logo .logo-anc{width: 119px;height: 45px;margin: 5px 0 0;}
+        .mobNav{position: absolute;top: 100%; left: 0;right: 0;z-index: 1;background-color: #fff; text-align: left;display: none;}
+        .hamburger{display: block;}
+        .mobNav li{display: block;}
+        .navigation-anc{color: #000;}
+        .navigation-anc:hover{color:#3a9ad9;}
+        .slider-textOverlay{display: none;}
+        .inner-blogsDiv{margin-bottom: 30px;}
+    }
+    @media only screen and (max-width:767px){
+        .address-text{margin-bottom: 30px;}
+    }
+    @media only screen and (max-width:599px){
+        .aboutUs{padding: 0 50px;}
+    }
+</style>
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="container">
+        	<div class="row">
+                <div class="col-xs-12">
+                    <p class="pull-left">Phone Number: 12 34 56 7890</p>
+                    <p class="pull-right">
+                        <a href="#" class="top-header-list">About Us</a>
+                        <a href="#" class="top-header-list top-header-contact">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12"><h1 class="logo"><a href="#" class="logo-anc">logo</a></h1></div>        	
+        </div>
+    </div>
+    <nav class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="hamburger">&#9776;</button>
+                    <button class="cross">&#735;</button>
+                	<ul class="navigation-ul text-center mobNav clearfix">
+                    	<li class="navigation-li"><a href="#" class="navigation-anc navigation-scroll">home</a></li>
+                    	<li class="navigation-li"><a href="#services" class="navigation-anc navigation-scroll">services</a></li>
+                    	<li class="navigation-li"><a href="#about" class="navigation-anc navigation-scroll">about us</a></li>
+                    	<li class="navigation-li"><a href="#contact" class="navigation-anc navigation-scroll">contact us</a></li>
+                    	<li class="navigation-li"><a href="#blog" class="navigation-anc navigation-scroll">blog</a></li>
+            		</ul>
+                </div>
+            </div>
+        </div>            	
+    </nav>
+    <section class="banner mb40">
+    	<div class="banner-slides">
+            <div>
+                <img src="img/banner-slide1.jpg" alt="slide1">
+                <div class="slider-textOverlay">
+                    <div class="slider-textWrap">
+                        <h6 class="slider-textTitle text-center">Service 1</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="img/banner-slide1.jpg" alt="slide2">
+                <div class="slider-textOverlay">
+                    <div class="slider-textWrap">
+                        <h6 class="slider-textTitle text-center">Service 2</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="img/banner-slide1.jpg" alt="slide3">
+                <div class="slider-textOverlay">
+                    <div class="slider-textWrap">
+                        <h6 class="slider-textTitle text-center">Service 3</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="container aboutUs text-center mb40">
+    	<div class="row">
+            <div class="col-xs-12">
+            	<h4 class="aboutUs-title">About Us</h4>
+            	<p class="aboutUs-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services-outerDiv text-center mb40">
+    	<div class="container">
+    		<div class="row">
+                <div class="col-xs-12">
+    			    <h4 class="services-mainTitle">Services</h4>
+    				<div class="services col-md-3">
+    					<p class="icon-wrap"><i class="icons fas fa-server fa-2x"></i></p>
+    					<h4 class="services-title">Service 1</h4>
+    					<p class="services-desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+    				</div>
+    				<div class="services col-md-3">
+    					<p class="icon-wrap"><i class="icons fas fa-server fa-2x"></i></p>
+    					<h4 class="services-title">Service 2</h4>
+    					<p class="services-desc">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+    				</div>
+    				<div class="services col-md-3">
+    					<p class="icon-wrap"><i class="icons fas fa-server fa-2x"></i></p>
+    					<h4 class="services-title">Service 3</h4>
+    					<p class="services-desc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+    				</div>
+    				<div class="services col-md-3">
+    					<p class="icon-wrap"><i class="icons fas fa-server fa-2x"></i></p>
+    					<h4 class="services-title">Service 4</h4>
+    					<p class="services-desc">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <section class="testimonial-div mb40">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 quote-icon">
+                    <h4 class="services-mainTitle">Testimonials</h4>
+                    <span class="quote-icon quote-before"><i class="fas fa-quote-left fa-2x"></i></span>
+                    <div class="testimonial-slider">
+                        <div class="testimonial-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+                        <div class="testimonial-text">Lorem Ipsum is simply dummy text of the printing</div>
+                        <div class="testimonial-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+                    </div>
+                    <span class="quote-icon quote-after"><i class="fas fa-quote-right fa-2x"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="container blog text-center mb40">
+    	<div class="row">
+            <div class="col-xs-12">
+    		    <h4 class="blogs-mainTitle">Blog</h4>
+                <div class="col-md-3 col-sm-6">
+                    <a class="blogs-anchor" href="#">
+                        <div class="inner-blogsDiv">
+                            <div class="blogs-imgDiv"><img class="blog-img" src="img/blog1.jpg" alt="blog1"></div>
+                            <div class="blogs-content clearfix">
+                                <h4 class="blogs-title">Blog Title 1</h4>
+                                <p class="blogs-desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a class="blogs-anchor" href="#">
+                        <div class="inner-blogsDiv">
+                            <div class="blogs-imgDiv"><img class="blog-img" src="img/blog2.jpg" alt="blog2"></div>
+                            <div class="blogs-content clearfix">
+                                <h4 class="blogs-title">Blog Title 2</h4>
+                                <p class="blogs-desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a class="blogs-anchor" href="#">
+                        <div class="inner-blogsDiv">
+                            <div class="blogs-imgDiv"><img class="blog-img" src="img/blog3.jpg" alt="blog3"></div>
+                            <div class="blogs-content clearfix">
+                                <h4 class="blogs-title">Blog Title 3</h4>
+                                <p class="blogs-desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a class="blogs-anchor" href="#">
+                        <div class="inner-blogsDiv">
+                            <div class="blogs-imgDiv"><img class="blog-img" src="img/blog4.jpg" alt="blog4"></div>
+                            <div class="blogs-content clearfix">
+                                <h4 class="blogs-title">Blog Title 4</h4>
+                                <p class="blogs-desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    	</div>
+    </section>
+    <section id="contact" class="contactUs-outerDiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4 class="contactUs-title">Contact Us</h4>
+                    <div class="col-md-5 col-md-offset-2 col-sm-6">
+                        <h6 class="address-title">Address</h6>
+                        <p class="address-text">12345, abcdef ghijklmn opqrst, </br>uvwx, xyz. </br> 000 000.</p>
+                    </div>
+                    <div class="col-md-5 col-sm-6">
+                        <h6 class="address-title">Email/ Phone</h6>
+                        <div class="address-text">
+                            <a class="address-text-anchor" href="mailto:abc@xyz.com"><i class="address-icons fa fa-envelope" aria-hidden="true"></i>abc@xyz.com</a>
+                            <a class="address-text-anchor" href="tel:12 34 56 7890"><i class="address-icons fa fa-phone-square" aria-hidden="true"></i>12 34 56 7890</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container top-footer">
+        <div class="row">
+            <div class="col-md-4">
+                <h6 class="footer-title">About Us</h6>
+                <p class="footer-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="col-md-4">
+                <h6 class="footer-title">Latest From Our Blogs</h6>
+                <ul class="footer-blog-text clearfix">
+                    <li><a href="#">Sample Text Blog 1</a></li>
+                    <li><a href="#">Sample Text Blog 2</a></li>
+                    <li><a href="#">Sample Text Blog 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="footer-title">Follow Us</h6>
+                <p class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f fa-1x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-1x"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g fa-1x"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-outerDiv">
+        <section class="container">
+            <div class="row">
+                <div class="col-xs-12"><p class="copyright-text">Copyright Text</p></div>            
+            </div>
+        </section>
+    </footer>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.banner-slides').slick({       
+            dots: true,
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
+
+        $('.testimonial-slider').slick({       
+            dots: true,
+            infinite: true,
+            speed: 4000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+        $('.hamburger').click(function(){
+            $(this).hide();
+            $('.cross').show();
+            $('.navigation-ul').slideDown();
+        });
+        $('.cross').click(function(){
+            $(this).hide();
+            $('.hamburger').show();
+            $('.navigation-ul').slideUp();
+        });
+
+        var cachedWidth = $(window).width();
+        $(window).resize(function(){
+            var newWidth = $(window).width();
+            if(newWidth !== cachedWidth){
+                if (window.innerWidth <= 1024) {
+                    $(".navigation-ul").hide();
+                    $(".hamburger").show();
+                    $(".cross").hide();
+                }else{
+                    if ($( ".navigation-ul" ).css('display','none')) {
+                        $(".navigation-ul").show();
+                    }
+                    if ($( ".hamburger" ).css('display','block')) {
+                        $(".hamburger").hide();
+                    }
+                }
+                cachedWidth = newWidth;   
+            }
+        });
+
+        // Add smooth scrolling to all links
+        $('.navigation-scroll').on('click', function (e) {
+            // e.preventDefault();
+            var target = this.hash,
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top-150
+            }, 900, 'swing', function () {
+            });
+            return false;
+        });
+
+        var stickyhead = $('.navigation');
+        var stickylogo = $('.logo');
+        var servicesDiv = $('.services-outerDiv');
+        var testimonialDiv = $('.testimonial-div');
+        var blogDiv = $('.blog');
+        var contactusDiv = $('.contactUs-outerDiv');
+        // scroll = $(window).scrollTop();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 90) stickyhead.addClass('sticky-navbar');
+            else stickyhead.removeClass('sticky-navbar');
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 30) stickylogo.addClass('sticky-logo');
+            else stickylogo.removeClass('sticky-logo');
+        });
+        $(window).scroll(function () {
+            if($(window).scrollTop() > 20) servicesDiv.addClass("scroll_animate");
+            else servicesDiv.removeClass("scroll_animate");
+        });
+        $(window).scroll(function () {
+            if($(window).scrollTop() > 300) testimonialDiv.addClass("scroll_animate");
+            else testimonialDiv.removeClass("scroll_animate");
+        });
+        $(window).scroll(function () {
+            if($(window).scrollTop() > 600) blogDiv.addClass("scroll_animate");
+            else blogDiv.removeClass("scroll_animate");
+        });
+        $(window).scroll(function () {
+            if($(window).scrollTop() > 1000) contactusDiv.addClass("scroll_animate");
+            else contactusDiv.removeClass("scroll_animate");
+        });
+    });
+</script>
+</body>
+</html>

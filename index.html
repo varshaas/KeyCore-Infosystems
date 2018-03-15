@@ -32,7 +32,7 @@
 	.navigation-li{position:relative;height:50px;display:inline-block;}
 	.navigation-anc{position:relative;font-size:16px;line-height:50px;height:inherit;color:#fff;padding:0 30px;display:block;transform: perspective(1px) translateZ(0);}
 	.navigation-anc:after{content:'';position:absolute;left:50%;right:50%;height:4px;bottom:0;background:#fff;-webkit-transition-property: left, right;transition-property: left, right;-webkit-transition-duration: 0.3s;transition-duration: 0.3s;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;}
-	.navigation-anc:hover{text-decoration:none;color:#fff;}
+	.navigation-anc:hover, .navigation-anc:focus{text-decoration:none;color:#fff;outline: none;}
 	.navigation-anc:hover:after{left:0;right:0;}
 	.banner{overflow:hidden;z-index: 0;}
     .banner-slides{display: none;}
@@ -137,10 +137,12 @@
         <div class="container">
         	<div class="row">
                 <div class="col-xs-12">
-                    <p class="pull-left">Phone Number: 12 34 56 7890</p>
+                    <p class="pull-left">
+                        <a href="tel:12 34 56 7890">Phone Number: 12 34 56 7890</a>
+                    </p>
                     <p class="pull-right">
-                        <a href="#" class="top-header-list">About Us</a>
-                        <a href="#" class="top-header-list top-header-contact">Contact Us</a>
+                        <a href="#about" class="top-header-list">About Us</a>
+                        <a href="#contact" class="top-header-list top-header-contact">Contact Us</a>
                     </p>
                 </div>
             </div>

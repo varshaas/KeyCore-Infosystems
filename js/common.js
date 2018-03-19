@@ -30,6 +30,8 @@ $(document).ready(function(){
             $('.navigation-ul').slideUp();
         });
 
+        $("img").unveil();
+
         var cachedWidth = $(window).width();
         $(window).resize(function(){
             var newWidth = $(window).width();
@@ -63,12 +65,11 @@ $(document).ready(function(){
         });
 
         $(window).scroll(function(){
-            var top = $(this).scrollTop();
             var stickyhead = $('.navigation');
             var stickylogo = $('.logo'); 
-            if ($(window).scrollTop() >= 90) stickyhead.addClass('sticky-navbar');
+            if ($(window).scrollTop() >= 100) stickyhead.addClass('sticky-navbar');
             else stickyhead.removeClass('sticky-navbar');
-            if ($(window).scrollTop() >= 30) stickylogo.addClass('sticky-logo');
+            if ($(window).scrollTop() >= 10) stickylogo.addClass('sticky-logo');
             else stickylogo.removeClass('sticky-logo');
             // This is then function used to detect if the element is scrolled into view
             function elementScrolled(elem)

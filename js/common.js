@@ -1,4 +1,6 @@
 $(document).ready(function(){
+        $("img").unveil();
+
         $('.banner-slides').slick({       
             dots: true,
             infinite: true,
@@ -30,22 +32,20 @@ $(document).ready(function(){
             $('.navigation-ul').slideUp();
         });
 
-        $("img").unveil();
-
         var cachedWidth = $(window).width();
         $(window).resize(function(){
             var newWidth = $(window).width();
             if(newWidth !== cachedWidth){
                 if (window.innerWidth <= 1024) {
                     $(".navigation-ul").hide();
-                    $(".hamburger").show();
-                    $(".cross").hide();
+                    $(".hamburger").show(5000);
+                    $(".cross").hide(5000);
                 }else{
                     if ($( ".navigation-ul" ).css('display','none')) {
-                        $(".navigation-ul").show();
+                        $(".navigation-ul").show(5000);
                     }
                     if ($( ".hamburger" ).css('display','block')) {
-                        $(".hamburger").hide();
+                        $(".hamburger").hide(5000);
                     }
                 }
                 cachedWidth = newWidth;   
@@ -58,7 +58,7 @@ $(document).ready(function(){
             var target = this.hash,
             $target = $(target);
             $('html, body').stop().animate({
-                'scrollTop': $target.offset().top-200
+                'scrollTop': $target.offset().top-0
             }, 900, 'swing', function () {
             });
             return false;
@@ -67,10 +67,17 @@ $(document).ready(function(){
         $(window).scroll(function(){
             var stickyhead = $('.navigation');
             var stickylogo = $('.logo'); 
-            if ($(window).scrollTop() >= 100) stickyhead.addClass('sticky-navbar');
-            else stickyhead.removeClass('sticky-navbar');
-            if ($(window).scrollTop() >= 10) stickylogo.addClass('sticky-logo');
-            else stickylogo.removeClass('sticky-logo');
+            var stickylogoanc = $('.logo-anc');
+            if ($(window).scrollTop() >= 100) {
+                stickyhead.addClass('sticky-navbar') ;
+                stickylogoanc.addClass('sticky-logo-anc');
+            }
+            else {
+                stickyhead.removeClass('sticky-navbar');
+                stickylogoanc.removeClass('sticky-logo-anc');
+            }
+            if ($(window).scrollTop() >= 10) {stickylogo.addClass('sticky-logo');}
+            else {stickylogo.removeClass('sticky-logo');}
             // This is then function used to detect if the element is scrolled into view
             function elementScrolled(elem)
             {
@@ -80,16 +87,16 @@ $(document).ready(function(){
                 return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
             }
             if(elementScrolled('.services-outerDiv')) {
-                $('.services-outerDiv').addClass('scroll_animate');      
+                $('.services-outerDiv .animated').addClass('fadeInDown');      
             }
             if(elementScrolled('.testimonial-div')) {
-                $('.testimonial-div').addClass('scroll_animate');      
+                $('.testimonial-div .animated').addClass('fadeInDown');      
             }
             if(elementScrolled('.blog')) {
-                $('.blog').addClass('scroll_animate');      
+                $('.blog .animated').addClass('fadeInDown');      
             }
             if(elementScrolled('.contactUs-outerDiv')) {
-                $('.contactUs-outerDiv').addClass('scroll_animate');      
+                $('.contactUs-outerDiv .animated').addClass('fadeInDown');      
             }
         });      
     });
